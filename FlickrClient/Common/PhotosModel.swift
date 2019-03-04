@@ -14,5 +14,7 @@ struct PhotosModel: IViewCellModel {
     let title : String
     let url : String
     var isFavorite : Bool
+    
+
 }
 

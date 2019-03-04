@@ -42,32 +42,13 @@ class DataBaseService {
     
     
     func saveFavourites(photo: IViewCellModel) {
-     
-        let newPhoto = FlickrPhotos(entity: self.photosEntity!, insertInto: self.backgroundContext)
         
-        if photo.isFavorite && !self.isInFavorites(byUrl: photo.url) {
-            
-            newPhoto.id = photo.id
-            newPhoto.title = photo.title
-            newPhoto.url = photo.url
-            newPhoto.isFavorite = photo.isFavorite
+        switch photo.isFavorite {
+        case true:
+             self.addInFavorites(photo: photo)
+        case false:
+             self.deleteFromFavorites(byUrl: photo.url)
         }
-        
-        if !photo.isFavorite && self.isInFavorites(byUrl: photo.url) {
-            
-            self.deleteFromFavorites(byUrl: photo.url)
-        
-        }
-        
-        do {
-            try self.backgroundContext.save()
-            print("Saving Complete")
-        } catch {
-            print("Saving Faild")
-            abort()
-        }
-        
-        
     }
     
     //MARK: - IDatabaseService
@@ -84,7 +65,25 @@ class DataBaseService {
         return results
     }
     
+    private func addInFavorites(photo: IViewCellModel){
+        
+        let newPhoto = FlickrPhotos(entity: self.photosEntity!, insertInto: self.backgroundContext)
+        newPhoto.id = photo.id
+        newPhoto.title = photo.title
+        newPhoto.url = photo.url
+        newPhoto.isFavorite = photo.isFavorite
+        
+        do {
+            try self.backgroundContext.save()
+            print("Saving Complete")
+        } catch {
+            print("Saving Faild")
+            abort()
+        }
+        
+    }
     
+    /*
     private func isInFavorites(byUrl: String ) -> Bool {
    
         let fetchRequest = self.setupFetchRequest(ByAttribute: "url", ForValue: byUrl)
@@ -99,22 +98,41 @@ class DataBaseService {
         
         return result
     }
-    
+    */
     
     private func deleteFromFavorites(byUrl: String) {
         let fetchRequest = self.setupFetchRequest(ByAttribute: "url", ForValue: byUrl)
         
+        do {
+            guard let findFavorites = try backgroundContext.fetch(fetchRequest) as? [NSManagedObject] else {return}
+                for item in findFavorites {
+                    backgroundContext.delete(item) }
+        } catch {
+            print("Deleting Failed")
+        }
+        do {
+            try self.backgroundContext.save()
+            print("Saving Complete")
+        } catch {
+            print("Saving Faild")
+            abort()
+        }
         
     }
     
     private func setupFetchRequest(ByAttribute: String, ForValue: String) -> NSFetchRequest<NSFetchRequestResult> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FlickrPhotos")
         fetchRequest.predicate = NSPredicate(format: "\(ByAttribute) = %@", "\(ForValue)")
+        fetchRequest.returnsObjectsAsFaults = false
         return fetchRequest
     }
     
-    
 }
 
-
+//extension DataBaseService: IDatabaseService{
+    
+    
+    
+    
+//}
 

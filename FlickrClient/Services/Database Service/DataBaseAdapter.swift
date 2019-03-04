@@ -7,3 +7,52 @@
 //
 
 import Foundation
+import CoreData
+
+class DataBaseAdapter {
+    
+    enum ErrorsFromDataBaseAdapter: Error {
+        case convertFailed(String)
+       
+        
+    }
+    
+    private var dataBaseService: IDatabaseService
+    
+    init (dataBaseService: IDatabaseService){
+        self.dataBaseService = dataBaseService
+    }
+    
+    private func convert<T>(data: [NSManagedObject]) throws -> T {
+        
+        if let flickrPhotos = data as? [FlickrPhotos] {
+            var photosModel:[PhotosModel] = []
+            for item in flickrPhotos {
+            let photo = PhotosModel(id: item.id!, title: item.title!, url: item.url!, isFavorite: item.isFavorite)
+            photosModel.append(photo)
+            }
+            guard let converted = photosModel as? T else {
+                throw ErrorsFromDataBaseAdapter.convertFailed("Type doesn't match ")
+            }
+            return converted
+        }
+        throw ErrorsFromDataBaseAdapter.convertFailed("Converted Failed")
+    }
+    
+    
+}
+
+extension DataBaseAdapter: IDataBaseAdapter {
+    func getFavourites() -> [PhotosModel] {
+    
+        
+        
+    }
+    
+    func updateFavourites(fromData: PhotosModel) {
+       
+    }
+    
+    
+ 
+}
