@@ -6,7 +6,6 @@ target 'FlickrClient' do
   use_frameworks!
 use_frameworks!
   pod 'Kingfisher', '5.0.1'
-  pod 'RealmSwift', '3.13.1'
   pod 'ReactiveCocoa', '8.0.2'   
 
 

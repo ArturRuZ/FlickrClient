@@ -11,7 +11,7 @@ import UIKit
 
 class FavoritesAssembly {
     
-    func build(database: IDatabaseService) -> (controller: UIViewController, presenter: FavoritesPresenterInput)? {
+    func build(dataBaseAdapter: IDataBaseAdapter) -> (controller: UIViewController, presenter: FavoritesPresenterInput)? {
         let storyboard = UIStoryboard(name: "FavoritesStoryboard", bundle: nil)
         
         guard let favoritesVC  = storyboard.instantiateViewController(withIdentifier: "kFavoritesViewIdentifier") as? FavoritesViewController else {
@@ -25,7 +25,7 @@ class FavoritesAssembly {
         presenter.interactorInput = interactor
         presenter.viewInput = favoritesVC
         interactor.output = presenter
-        interactor.databse = database
+        interactor.dataBaseAdapter = dataBaseAdapter
         
         return (controller: favoritesVC, presenter: presenter)
     }

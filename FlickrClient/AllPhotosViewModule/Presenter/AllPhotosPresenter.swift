@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class FlickraPresenter {
+class AllPhotosPresenter {
     
     private weak var presenterDelegate : FlickraPresenterDelegate!
     private weak var view : FlickraViewInput!
-    private var interactor: FlickraInteractorInput!
+    private var interactor: AllPhotosInteractorInput!
     
 }
 
-extension FlickraPresenter : FlickraPresenterInput {
+extension AllPhotosPresenter : FlickraPresenterInput {
     
     var output: FlickraPresenterDelegate {
         get {
@@ -38,7 +38,7 @@ extension FlickraPresenter : FlickraPresenterInput {
         
     }
     
-    var interactorInput: FlickraInteractorInput {
+    var interactorInput: AllPhotosInteractorInput {
         get {
             return interactor
         }
@@ -49,14 +49,14 @@ extension FlickraPresenter : FlickraPresenterInput {
 }
 
 
-extension FlickraPresenter : FlickraInteractorOutput {
+extension AllPhotosPresenter : FlickraInteractorOutput {
     func presentData(storage : [PhotosModel]){
         view.presentData(photosDataForView : storage)
     }
 }
 
 
-extension FlickraPresenter: FlickraViewOutput {
+extension AllPhotosPresenter: FlickraViewOutput {
     func viewDidLoad() {
         interactorInput.getData()
     }
@@ -66,7 +66,7 @@ extension FlickraPresenter: FlickraViewOutput {
 }
 
 
-extension FlickraPresenter{
+extension AllPhotosPresenter{
     
     func updateData(updateData: PhotosModel){
         interactor.updateData(updateData: updateData)

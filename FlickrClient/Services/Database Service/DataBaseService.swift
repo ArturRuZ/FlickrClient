@@ -41,7 +41,7 @@ class DataBaseService {
 
     
     
-    func saveFavourites(photo: IViewCellModel) {
+    func updateFavourites(photo: PhotosModel) {
         
         switch photo.isFavorite {
         case true:
@@ -53,7 +53,7 @@ class DataBaseService {
     
     //MARK: - IDatabaseService
     
-    func loadFavourites() -> [NSManagedObject] {
+   private func loadFavourites() -> [NSManagedObject] {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FlickrPhotos")
         var results: [NSManagedObject] = []
@@ -65,7 +65,7 @@ class DataBaseService {
         return results
     }
     
-    private func addInFavorites(photo: IViewCellModel){
+    private func addInFavorites(photo: PhotosModel){
         
         let newPhoto = FlickrPhotos(entity: self.photosEntity!, insertInto: self.backgroundContext)
         newPhoto.id = photo.id
@@ -129,10 +129,18 @@ class DataBaseService {
     
 }
 
-//extension DataBaseService: IDatabaseService{
+extension DataBaseService: IDatabaseService{
+    func loadObjectsFromBase() -> [NSManagedObject] {
+        return self.loadFavourites()
+    }
+    
+    func updateObjectsInBase(fromData: PhotosModel) {
+        self.updateFavourites(photo: fromData)
+    }
     
     
     
     
-//}
+    
+}
 

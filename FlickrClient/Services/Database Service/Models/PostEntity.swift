@@ -7,6 +7,7 @@
 //
 
 import Foundation
+/*
 import RealmSwift
 
 class PostEntity: Object {
@@ -16,7 +17,7 @@ class PostEntity: Object {
    var isFavorite = RealmOptional<Bool>()
     
 }
-/*
+
 extension PostEntity: ViewCellModel {
     var isFavorite: Bool {
         get {

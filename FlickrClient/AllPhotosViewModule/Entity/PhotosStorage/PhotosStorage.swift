@@ -18,7 +18,7 @@ class  PhotosStorage {
             let photoStruct = PhotosModel(id: parsedData.photos.photo[i].id, title: parsedData.photos.photo[i].title, url: parsedData.photos.photo[i].url_l, isFavorite: false)
             storage.append(photoStruct)
         }
-        interactor.presentData(storage: &storage)
+        interactor.presentData(storage: storage)
     }
     
     func updateData(updateData: IViewCellModel) {
@@ -29,7 +29,7 @@ class  PhotosStorage {
     }
     
     func presentData() {
-        interactor.presentData(storage: &storage)
+        interactor.presentData(storage: storage)
     }
 }
 

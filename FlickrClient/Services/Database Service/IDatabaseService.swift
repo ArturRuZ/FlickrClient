@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
 protocol IDatabaseService: class{
-    func loadObjectsFromBase() -> [PhotosModel]
-    func updateObjectsStateInBase(fromData: PhotosModel) 
+    func loadObjectsFromBase() -> [NSManagedObject]
+    func updateObjectsInBase(fromData: PhotosModel) 
 }

@@ -16,5 +16,5 @@ protocol PhotosStorageInput: class {
 }
 
 protocol PhotosStorageOutput: class {
-    func presentData(storage : inout [PhotosModel])
+    func presentData(storage: [PhotosModel])
 }

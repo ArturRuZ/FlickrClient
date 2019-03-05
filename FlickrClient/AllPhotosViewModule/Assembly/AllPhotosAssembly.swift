@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class FlickraAssembly {
+class AllPhotosAssembly {
     
-    func build(internetService: InternetServiceInput, database: IDatabaseService) -> (controller: UIViewController, presenter: FlickraPresenterInput)? {
+    func build(internetService: InternetServiceInput, dataBaseAdapter: IDataBaseAdapter) -> (controller: UIViewController, presenter: FlickraPresenterInput)? {
         let storyboard = UIStoryboard(name: "FlickraStoryboard", bundle: nil)
         guard let flickraVC  = storyboard.instantiateViewController(withIdentifier: "kFlickraNavigationControllerIdentifier") as? FlickraViewController else {
             return nil}
        
-        let presenter = FlickraPresenter()
-        let interactor = FlickraInteractor()
+        let presenter = AllPhotosPresenter()
+        let interactor = AllPhotosInteractor()
         let photoStorage = PhotosStorage()
         
         flickraVC.output = presenter
@@ -28,7 +28,7 @@ class FlickraAssembly {
         photoStorage.storageOutput = interactor
         
         interactor.internetService = internetService
-        interactor.databse = database
+        interactor.dataBaseAdapter = dataBaseAdapter
         
         return (controller: flickraVC, presenter: presenter)
     }

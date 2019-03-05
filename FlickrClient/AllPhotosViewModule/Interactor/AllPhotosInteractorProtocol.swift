@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol  FlickraInteractorInput: class {
+protocol  AllPhotosInteractorInput: class {
     var output: FlickraInteractorOutput { get set }
     var inputStorage : PhotosStorageInput { get set }
     func getData()

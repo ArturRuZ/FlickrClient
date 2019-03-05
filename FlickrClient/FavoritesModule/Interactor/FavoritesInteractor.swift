@@ -11,7 +11,7 @@ import Foundation
 
 class FavoritesInteractor {
     private weak var interactorOutput : FavoritesInteractorOutput!
-    var databse : IDatabaseService!
+    var dataBaseAdapter : IDataBaseAdapter!
     
     deinit{
         print("deinit FavoritesInteractor")}
@@ -33,7 +33,7 @@ extension FavoritesInteractor : FavoritesInteractorInput{
 
 extension FavoritesInteractor{
     func prepareData(){
-        guard let preparedData = databse?.loadObjectsFromBase() else {return}
+        guard let preparedData = self.dataBaseAdapter?.getFavourites() else {return}
         interactorOutput.dataPrepared(data: preparedData)
     }
 }

@@ -13,11 +13,11 @@
 		344538EF21D539C100959319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344538ED21D539C100959319 /* LaunchScreen.storyboard */; };
 		344538F821D53A4900959319 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344538F721D53A4900959319 /* Application.swift */; };
 		344538FB21D53A9500959319 /* ModulesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344538FA21D53A9500959319 /* ModulesCoordinator.swift */; };
-		3445390521D53C6700959319 /* FlickraInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390421D53C6700959319 /* FlickraInteractor.swift */; };
-		3445390721D53C8500959319 /* FlickraInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390621D53C8500959319 /* FlickraInteractorProtocol.swift */; };
-		3445390921D53CA200959319 /* FlickraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390821D53CA200959319 /* FlickraPresenter.swift */; };
-		3445390B21D53CB400959319 /* FlickraPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390A21D53CB400959319 /* FlickraPresenterProtocol.swift */; };
-		3445390D21D53CF100959319 /* FlickraAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390C21D53CF100959319 /* FlickraAssembly.swift */; };
+		3445390521D53C6700959319 /* AllPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390421D53C6700959319 /* AllPhotosInteractor.swift */; };
+		3445390721D53C8500959319 /* AllPhotosInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390621D53C8500959319 /* AllPhotosInteractorProtocol.swift */; };
+		3445390921D53CA200959319 /* AllPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390821D53CA200959319 /* AllPhotosPresenter.swift */; };
+		3445390B21D53CB400959319 /* AllPhotosPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390A21D53CB400959319 /* AllPhotosPresenterProtocol.swift */; };
+		3445390D21D53CF100959319 /* AllPhotosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390C21D53CF100959319 /* AllPhotosAssembly.swift */; };
 		3445390F21D53D4400959319 /* FlickraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445390E21D53D4400959319 /* FlickraView.swift */; };
 		3445391121D53D6900959319 /* FlickraStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3445391021D53D6900959319 /* FlickraStoryboard.storyboard */; };
 		3445391321D5456800959319 /* FlickraViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445391221D5456800959319 /* FlickraViewProtocol.swift */; };
@@ -58,7 +58,6 @@
 		34C86C2621F8E12D007A0BC8 /* ControllerPackageBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C86C2521F8E12D007A0BC8 /* ControllerPackageBuilderProtocol.swift */; };
 		34ED435121E6868400D635D6 /* DetailPhotoViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34ED435021E6868400D635D6 /* DetailPhotoViewStoryboard.storyboard */; };
 		34ED435321E686C600D635D6 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED435221E686C600D635D6 /* DetailPhotoViewController.swift */; };
-		34ED437521E7E63500D635D6 /* RealmDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED437421E7E63500D635D6 /* RealmDatabaseService.swift */; };
 		34ED437721E7E64900D635D6 /* IDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED437621E7E64900D635D6 /* IDatabaseService.swift */; };
 		34ED437A21E7E67100D635D6 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED437921E7E67100D635D6 /* PostEntity.swift */; };
 		34ED9502220491F300E85CDC /* BuildingParametrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ED9501220491F300E85CDC /* BuildingParametrs.swift */; };
@@ -72,11 +71,11 @@
 		344538F021D539C100959319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344538F721D53A4900959319 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		344538FA21D53A9500959319 /* ModulesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesCoordinator.swift; sourceTree = "<group>"; };
-		3445390421D53C6700959319 /* FlickraInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraInteractor.swift; sourceTree = "<group>"; };
-		3445390621D53C8500959319 /* FlickraInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraInteractorProtocol.swift; sourceTree = "<group>"; };
-		3445390821D53CA200959319 /* FlickraPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraPresenter.swift; sourceTree = "<group>"; };
-		3445390A21D53CB400959319 /* FlickraPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraPresenterProtocol.swift; sourceTree = "<group>"; };
-		3445390C21D53CF100959319 /* FlickraAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraAssembly.swift; sourceTree = "<group>"; };
+		3445390421D53C6700959319 /* AllPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosInteractor.swift; sourceTree = "<group>"; };
+		3445390621D53C8500959319 /* AllPhotosInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosInteractorProtocol.swift; sourceTree = "<group>"; };
+		3445390821D53CA200959319 /* AllPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosPresenter.swift; sourceTree = "<group>"; };
+		3445390A21D53CB400959319 /* AllPhotosPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosPresenterProtocol.swift; sourceTree = "<group>"; };
+		3445390C21D53CF100959319 /* AllPhotosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosAssembly.swift; sourceTree = "<group>"; };
 		3445390E21D53D4400959319 /* FlickraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraView.swift; sourceTree = "<group>"; };
 		3445391021D53D6900959319 /* FlickraStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlickraStoryboard.storyboard; sourceTree = "<group>"; };
 		3445391221D5456800959319 /* FlickraViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickraViewProtocol.swift; sourceTree = "<group>"; };
@@ -117,7 +116,6 @@
 		34C86C2521F8E12D007A0BC8 /* ControllerPackageBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerPackageBuilderProtocol.swift; sourceTree = "<group>"; };
 		34ED435021E6868400D635D6 /* DetailPhotoViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPhotoViewStoryboard.storyboard; sourceTree = "<group>"; };
 		34ED435221E686C600D635D6 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
-		34ED437421E7E63500D635D6 /* RealmDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseService.swift; sourceTree = "<group>"; };
 		34ED437621E7E64900D635D6 /* IDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDatabaseService.swift; sourceTree = "<group>"; };
 		34ED437921E7E67100D635D6 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
 		34ED9501220491F300E85CDC /* BuildingParametrs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingParametrs.swift; sourceTree = "<group>"; };
@@ -192,8 +190,8 @@
 		344538FC21D53AE900959319 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				3445390821D53CA200959319 /* FlickraPresenter.swift */,
-				3445390A21D53CB400959319 /* FlickraPresenterProtocol.swift */,
+				3445390821D53CA200959319 /* AllPhotosPresenter.swift */,
+				3445390A21D53CB400959319 /* AllPhotosPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -201,8 +199,8 @@
 		344538FD21D53AF900959319 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				3445390421D53C6700959319 /* FlickraInteractor.swift */,
-				3445390621D53C8500959319 /* FlickraInteractorProtocol.swift */,
+				3445390421D53C6700959319 /* AllPhotosInteractor.swift */,
+				3445390621D53C8500959319 /* AllPhotosInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -210,7 +208,7 @@
 		344538FE21D53B1100959319 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				3445390C21D53CF100959319 /* FlickraAssembly.swift */,
+				3445390C21D53CF100959319 /* AllPhotosAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -361,7 +359,6 @@
 			isa = PBXGroup;
 			children = (
 				34ED437821E7E66800D635D6 /* Models */,
-				34ED437421E7E63500D635D6 /* RealmDatabaseService.swift */,
 				34ED437621E7E64900D635D6 /* IDatabaseService.swift */,
 				34611038222C1B9B00AE159D /* DataBaseAdapter.swift */,
 				34611049222DACD000AE159D /* IDataBaseAdapter.swift */,
@@ -574,8 +571,6 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -585,8 +580,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +607,7 @@
 				349B531221E4DE4300EB7BD9 /* InternetService.swift in Sources */,
 				348CB88221E8FE0400A018AB /* FavoritesPresenterProtocol.swift in Sources */,
 				34C86C2421F8DFB5007A0BC8 /* ControllerPackageProtocol.swift in Sources */,
-				3445390721D53C8500959319 /* FlickraInteractorProtocol.swift in Sources */,
+				3445390721D53C8500959319 /* AllPhotosInteractorProtocol.swift in Sources */,
 				3457243421D792A1004A806A /* PhotosStorage.swift in Sources */,
 				34ED9502220491F300E85CDC /* BuildingParametrs.swift in Sources */,
 				3461103D222C1BF300AE159D /* DataBaseService.swift in Sources */,
@@ -623,7 +616,7 @@
 				349B533621E511FB00EB7BD9 /* DetailPhotoViewProtocol.swift in Sources */,
 				34ED437A21E7E67100D635D6 /* PostEntity.swift in Sources */,
 				34611039222C1B9B00AE159D /* DataBaseAdapter.swift in Sources */,
-				3445390921D53CA200959319 /* FlickraPresenter.swift in Sources */,
+				3445390921D53CA200959319 /* AllPhotosPresenter.swift in Sources */,
 				34C86C2621F8E12D007A0BC8 /* ControllerPackageBuilderProtocol.swift in Sources */,
 				349B533221E5112D00EB7BD9 /* DetailPhotoPresenterProtocol.swift in Sources */,
 				349B532421E50DFC00EB7BD9 /* DetailPhotoPresenter.swift in Sources */,
@@ -634,17 +627,16 @@
 				3445391321D5456800959319 /* FlickraViewProtocol.swift in Sources */,
 				3457243021D7851D004A806A /* IViewCellModel.swift in Sources */,
 				348CB87921E8FD9000A018AB /* FavoritesProtocol.swift in Sources */,
-				3445390521D53C6700959319 /* FlickraInteractor.swift in Sources */,
+				3445390521D53C6700959319 /* AllPhotosInteractor.swift in Sources */,
 				34C86C2121F8BB8A007A0BC8 /* ControllerPackage.swift in Sources */,
-				3445390D21D53CF100959319 /* FlickraAssembly.swift in Sources */,
+				3445390D21D53CF100959319 /* AllPhotosAssembly.swift in Sources */,
 				349B531621E4DE7A00EB7BD9 /* InternetService Protocol.swift in Sources */,
 				344538E521D539C100959319 /* AppDelegate.swift in Sources */,
 				349B532821E50E1D00EB7BD9 /* DetailPhotoInteractorProtocol.swift in Sources */,
 				349B532621E50E0A00EB7BD9 /* DetailPhotoInteractor.swift in Sources */,
-				34ED437521E7E63500D635D6 /* RealmDatabaseService.swift in Sources */,
 				3457243621D7942B004A806A /* PhotosStorageProtocol.swift in Sources */,
 				34963BA721EBADE900E491D0 /* FavoritesCellView.swift in Sources */,
-				3445390B21D53CB400959319 /* FlickraPresenterProtocol.swift in Sources */,
+				3445390B21D53CB400959319 /* AllPhotosPresenterProtocol.swift in Sources */,
 				3461104A222DACD000AE159D /* IDataBaseAdapter.swift in Sources */,
 				348CB88021E8FDF500A018AB /* FavoritesPresenter.swift in Sources */,
 				3457243921D8CB20004A806A /* PhotosModel.swift in Sources */,

@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
-struct PhotosModel: IViewCellModel {
+class PhotosModel: IViewCellModel {
     let id : String
     let title : String
     let url : String
     var isFavorite : Bool
     
+    init (id: String, title: String, url: String, isFavorite : Bool) {
+        self.id = id
+        self.title = title
+        self.url = url
+        self.isFavorite = isFavorite
+    }
 
 }
 

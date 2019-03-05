@@ -15,7 +15,7 @@ import UIKit
 class ControllerPackageBuilder: ControllerPackageBuilderProtocol {
     
     private let internetService: InternetServiceInput = InternetService()
-    private let database: IDatabaseService = RealmDatabaseService()
+    private let dataBaseAdapter: IDataBaseAdapter = DataBaseAdapter(dataBaseService: DataBaseService())
     private let modulesCoordinator : ModulesCoordinator
     
     init(modulesCoordinator: ModulesCoordinator){
@@ -34,8 +34,6 @@ class ControllerPackageBuilder: ControllerPackageBuilderProtocol {
         guard let photo = selectedPhoto as PhotosModel? else {return detailPhotoVC}
         detailPhotoPresenter.prepareFotoToShow(selectedPhoto: photo)
         return detailPhotoVC
-       default:
-        return nil
         }
     }
     
@@ -60,8 +58,8 @@ class ControllerPackageBuilder: ControllerPackageBuilderProtocol {
 
 extension ControllerPackageBuilder {
     private func createFlickraController()->(ControllerPackageProtocol?){
-        let flickraAssembly = FlickraAssembly()
-        guard let flickra = flickraAssembly.build(internetService: internetService, database: database) else {return nil}
+        let flickraAssembly = AllPhotosAssembly()
+        guard let flickra = flickraAssembly.build(internetService: self.internetService, dataBaseAdapter: self.dataBaseAdapter) else {return nil}
         flickra.presenter.output = modulesCoordinator
         return  ControllerPackage(controller: flickra.controller, presenter: flickra.presenter)
     }
@@ -75,7 +73,7 @@ extension ControllerPackageBuilder {
     
     private func createFavoritesController()-> (ControllerPackageProtocol?){
         let favoritesView = FavoritesAssembly()
-        guard let favorites = favoritesView.build(database: database)else {return nil}
+        guard let favorites = favoritesView.build(dataBaseAdapter: self.dataBaseAdapter)else {return nil}
         favorites.presenter.output = modulesCoordinator
         return ControllerPackage(controller: favorites.controller, presenter:favorites.presenter)
     }

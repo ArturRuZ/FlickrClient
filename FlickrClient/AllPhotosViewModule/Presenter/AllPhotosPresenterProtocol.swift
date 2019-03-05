@@ -12,7 +12,7 @@ import UIKit
 protocol FlickraPresenterInput: class {
     var output: FlickraPresenterDelegate { get set }
     var viewInput: FlickraViewInput { get set }
-    var interactorInput: FlickraInteractorInput { get set }
+    var interactorInput: AllPhotosInteractorInput { get set }
     func viewDidLoad()
     func updateData(updateData: PhotosModel)
 }

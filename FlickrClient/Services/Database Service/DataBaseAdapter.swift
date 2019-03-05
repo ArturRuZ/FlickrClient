@@ -45,12 +45,20 @@ class DataBaseAdapter {
 extension DataBaseAdapter: IDataBaseAdapter {
     func getFavourites() -> [PhotosModel] {
     
-        
+        let objects = self.dataBaseService.loadObjectsFromBase()
+    
+        do {
+            let photosModel: [PhotosModel] = try convert(data: objects)
+            return photosModel
+        } catch {
+            print("Error in getFavourites()")
+            return []
+        }
         
     }
     
     func updateFavourites(fromData: PhotosModel) {
-       
+       self.dataBaseService.updateObjectsInBase(fromData: fromData)
     }
     
     
